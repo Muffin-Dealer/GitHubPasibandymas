@@ -25,5 +25,10 @@ namespace GitHubTestinimas
 
 
     }
+	
+	class Herojus : IHerojus{
 
+public string Vardas{ get;}
+public float HP {get;}		
+	}
 }
