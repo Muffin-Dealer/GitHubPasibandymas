@@ -30,5 +30,32 @@ namespace GitHubTestinimas
 
 public string Vardas{ get;}
 public float HP {get;}		
+        public float Attack { get; }
+        public float Defence { get; }
+
+        public void Attack_Target()
+        {
+            Console.WriteLine("Atakuoti");
+        }
+
+        public bool IsTargetDead(ITarget target)
+        {
+            if (target.Hp <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 	}
+
+    class Priesas : ITarget
+    {
+        public string Pavadinimas { get; set; }
+        public float Hp { get; set; }
+        public float Attack { get; set; }
+        public float Defence { get; set; }
+    }
 }
